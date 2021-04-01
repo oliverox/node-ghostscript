@@ -68,4 +68,15 @@ gs.prototype.resolution = function(xres, yres) {
 
 gs.prototype.r = gs.prototype.res = gs.prototype.resolution;
 
+gs.prototype.firstPage = function(page) {
+  this.options.push('-dFirstPage=' + page)
+  return this;
+}
+
+gs.prototype.lastPage = function(page) {
+  this.options.push('-dLastPage=' + page)
+  return this;
+}
+
+
 module.exports = create;
